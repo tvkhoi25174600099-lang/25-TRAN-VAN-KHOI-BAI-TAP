@@ -1,0 +1,28 @@
+X =int(input("nhập tử số = "))
+#bài 3
+Y= int(input("nhập mẫu số = "))
+tử_số_ban_đầu=X
+mẫu_số_ban_đầu=Y
+
+if Y != 0:
+    if X >Y :
+        while Y != 0 :
+            Z = X % Y
+            X = Y
+            Y = Z
+        S = X
+        print(S)
+        A = tử_số_ban_đầu//S
+        B = mẫu_số_ban_đầu//S   
+        print(f"vậy tử số và mẫu số sau khi tối giản là : {A} , {B}")  
+    else :
+        while X != 0 :
+            Z = Y % X
+            Y=X
+            X=Z
+        D = Y
+        A = tử_số_ban_đầu//D
+        B = mẫu_số_ban_đầu//D
+        print(f"vậy tử số và mẫu số sau khi tối giản là : {A} , {B}") 
+else :
+    print("số ko có giá trị vì mẫu bằng 0")

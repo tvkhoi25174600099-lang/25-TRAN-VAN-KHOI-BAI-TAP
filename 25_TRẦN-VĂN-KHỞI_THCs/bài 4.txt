@@ -1,0 +1,5 @@
+#bài 4
+X = int(input("nhập số vô đây : "))
+print(f"các số nguyên tố nhỏ hơn {X} là :")
+for Y in range(1,X):
+    print(Y)

@@ -1,0 +1,10 @@
+# Bài 1
+X = int(input("nhập số mà bạn muốn kiểm tra vô đây :"))
+if X < 0:
+    print(f" {X} không là số chính phương vì nó nhỏ hơn 0")
+else :
+    z = int(X**0.5)
+    if z * z == X :
+        print(f" {X} là số chính phương ")
+    else :
+        print(f" {X} không là số chính phương")

@@ -1,0 +1,16 @@
+#bài 2
+X = int(input("nhập a ="))
+Y = int(input("nhập b ="))
+if X >Y :
+    while Y != 0 :
+        Z = X % Y
+        X = Y
+        Y = Z
+    print(f"vậy ước chung lớn nhất là: {X} ")
+         
+else :
+    while X != 0 :
+        Z = Y % X
+        Y=X
+        X=Z
+    print(f"vậy ước chung lớn nhất là: {Y} ")

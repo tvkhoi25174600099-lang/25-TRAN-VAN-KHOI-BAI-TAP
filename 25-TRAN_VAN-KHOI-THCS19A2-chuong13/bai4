@@ -1,0 +1,25 @@
+products = [
+    ["ID", "Tên", "Giá"],
+    [1, "Laptop", 1200],
+    [2, "Chuột", 25],
+    [3, "Bàn phím", 75]
+]
+
+with open("san_pham.txt", "w", encoding="utf-8") as f:
+    for p in products:
+        f.write(",".join(map(str, p)) + "\n")
+
+id_update = input("Nhập ID: ")
+new_price = input("Giá mới: ")
+
+new_list = []
+with open("san_pham.txt", "r", encoding="utf-8") as f:
+    for line in f:
+        data = line.strip().split(",")
+        if data[0] == id_update:
+            data[2] = new_price
+        new_list.append(",".join(data))
+
+with open("san_pham.txt", "w", encoding="utf-8") as f:
+    for line in new_list:
+        f.write(line + "\n")

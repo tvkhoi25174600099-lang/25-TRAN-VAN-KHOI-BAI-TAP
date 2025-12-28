@@ -1,0 +1,6 @@
+with open("nguon.txt", "rb") as src, open("dich.txt", "wb") as dst:
+    while True:
+        chunk = src.read(1024)
+        if not chunk:
+            break
+        dst.write(chunk)
